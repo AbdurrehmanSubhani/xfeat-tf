@@ -8,9 +8,10 @@ import numpy as np
 
 from modules.model import XFeatModel  # Assuming XFeatModel is implemented in TensorFlow
 from modules.dataset.augmentation import AugmentationPipe
-from modules.training.utils import make_batch
-from modules.training.losses import dual_softmax_loss, coordinate_classification_loss, alike_distill_loss, keypoint_loss, check_accuracy
-from modules.dataset.megadepth.megadepth import MegaDepthDataset, megadepth_warper
+from modules.training.utils import make_batch, check_accuracy
+from modules.training.losses import dual_softmax_loss, coordinate_classification_loss, alike_distill_loss, keypoint_loss
+from modules.dataset.megadepth.megadepth import MegaDepthDataset
+from modules.dataset.megadepth import megadepth_warper
 
 
 def parse_arguments():

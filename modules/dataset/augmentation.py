@@ -66,6 +66,7 @@ class AugmentationPipe(tf.keras.layers.Layer):
         self.max_num_imgs = max_num_imgs
         self.num_test_imgs = num_test_imgs
         self.reload_step = reload_step
+        self.geometric = geometric
         self.cnt = 1
 
         self.dims_t = tf.convert_to_tensor([int(self.dims[0] * (1. - self.sides_crop)) - int(self.dims[0] * self.sides_crop) - 1,
