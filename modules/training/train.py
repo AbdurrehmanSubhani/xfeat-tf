@@ -85,7 +85,8 @@ class Trainer:
         if model_name in ('xfeat_default', 'xfeat_synthetic'):
             self.augmentor = AugmentationPipe(
                                         img_dir=synthetic_root_path,
-                                        device=self.dev, load_dataset=True,
+                                        #device=self.dev, 
+                                        load_dataset=True,
                                         batch_size=int(self.batch_size * 0.4 if model_name=='xfeat_default' else batch_size),
                                         out_resolution=training_res, 
                                         warp_resolution=training_res,
